@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+<!-- Vue também oferece a v-modeldirectiva que faz a ligação de duas vias 
+    entre a entrada forma e estado do aplicativo uma brisa: -->
+
+    <div id="app-6">
+        <p>{{ message }}</p>
+        <input type="text" v-model="message">
+    </div>
+
+    <script>
+        var app6 = new Vue({
+            el: '#app-6',
+            data: {
+                message: 'Hello vue'
+            },
+        })
+    </script>
+</body>
+
+</html>
