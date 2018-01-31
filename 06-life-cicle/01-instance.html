@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <!-- 
+         Existem outros gatilhos (em inglês, hooks) chamados em diferentes 
+         etapas do ciclo de vida da instância, como mounted, updated e destroyed. 
+         Qualquer gatilho de ciclo de vida é executado com seu contexto this apontando 
+         para a instância Vue que o invocou.
+    -->
+ 
+
+    <script>
+
+        new Vue({
+            data: {
+                a: 1
+                },
+            created: function () {
+                console.log('------------------------------------');
+                console.log('a is: ' + this.a);
+                console.log('------------------------------------');
+            }
+        })
+    </script>
+
+</body>
+
+</html>

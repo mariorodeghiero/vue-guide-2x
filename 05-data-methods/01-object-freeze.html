@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vue Guide</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
+
+<body>
+
+    <!-- 
+        A única exceção é ao usar Object.freeze(), que previne propriedades existentes 
+        de serem modificadas. Também significa que
+        o sistema de reatividade não pode rastrear mudança 
+    -->
+    <div id="app">
+        <p>{{ obj.foo }}</p>
+        <button @click="obj.foo = 'baz'">Change</button>
+    </div>
+
+    <script>
+        var obj = {
+            foo: 'bar'
+        }
+
+        Object.freeze(obj)
+
+        new Vue({
+            el: '#app',
+            data () {
+                return {
+                    obj
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>
